@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <h2>Articles</h2>
+      </a>
+      <nav>
+        <a href="/articles">
+          <button>Back</button>
+        </a>
+      </nav>
+    </header>
+    <div>
+      <h1>Title: <%= article.title %></h1>
+      <h2>Author: <%= article.author %></h2>
+      <h2>Tags: <%= article.tags %></h2>
+      <p>Description: <%= article.description %></p>
+      <h3>Likes: <%= article.likes ? article.likes : 0 %></h3>
+    </div>
+    <div>
+      <a href="/articles/<%= article.id %>/inc">
+        <button class="btn">Likes</button>
+      </a>
+    </div>
+    <div>
+      <a href="/articles/<%= article.id %>/edit">
+        <button>Edit</button>
+      </a>
+      <a href="/articles/<%= article.id %>/delete">
+        <button>Delete</button>
+      </a>
+    </div>
+  </body>
+</html>
