@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <a href="/">
+      <h2>Home</h2>
+    </a>
+    <nav>
+      <a href="/articles/new">
+        <button>Add Article</button>
+      </a>
+    </nav>
+    <form action="/articles/<%= article.id %>" method="post">
+      <h2>Update article Detail</h2>
+      <input
+        type="text"
+        name="title"
+        placeholder="article Name"
+        value="<%= article.title %>"
+      />
+      <textarea
+        name="description"
+        cols="20"
+        rows="10"
+        placeholder="Dexcription"
+      >
+          <%= article.description %>
+      </textarea>
+      <input
+        type="text"
+        name="tags"
+        placeholder="Tags"
+        value="<%= article.tags %>"
+      />
+      <input
+        type="text"
+        name="author"
+        placeholder="Author Name"
+        value="<%= article.author %>"
+      />
+      <input
+        type="number"
+        name="likes"
+        placeholder="Likes"
+        value="<%= article.likes %>"
+      />
+
+      <button type="submit">Update article</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <a href="/">
+      <h2>Home</h2>
+    </a>
+    <nav>
+      <a href="/articles">
+        <button>Article List</button>
+      </a>
+    </nav>
+    <form action="/articles" method="post">
+      <h2>Enter Article</h2>
+      <input type="text" name="title" placeholder="Title" />
+      <textarea
+        name="description"
+        cols="20"
+        rows="10"
+        placeholder="Description"
+      ></textarea>
+      <input type="text" name="tags" placeholder="Tags" />
+      <input type="text" name="author" placeholder="Author Name" />
+      <input type="number" name="likes" placeholder="Likes" />
+      <button type="submit">Add Article</button>
+    </form>
+  </body>
+</html>
