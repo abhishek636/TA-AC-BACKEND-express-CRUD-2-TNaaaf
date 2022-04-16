@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <a href="/">
+      <h2>Articles</h2>
+    </a>
+    <nav>
+      <a href="/articles/new">
+        <button>Add article</button>
+      </a>
+    </nav>
+    <h1>List of Articles</h1>
+    <% articles.forEach(article => { %>
+    <div>
+      <a href="/articles/<%= article._id %>">
+        <button class="btn"><%= article.title %></button>
+      </a>
+    </div>
+    <% }) %>
+  </body>
+</html>

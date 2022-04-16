@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <a href="/">
+      <h2>Articles</h2>
+    </a>
+    <nav>
+      <a href="/articles">
+        <button>Article List</button>
+      </a>
+    </nav>
+    <form action="/comments/<%= comment.id%>" method="post">
+      <h2>Update Comments</h2>
+      <textarea name="content" rows="6" placeholder="Update Comment">
+          <%= comment.content %>
+      </textarea>
+      <input
+        type="number"
+        name="likes"
+        placeholder="Likes"
+        value="<%= comment.likes %>"
+      />
+      <input
+        type="text"
+        name="author"
+        placeholder="Author"
+        value="<%= comment.author %>"
+      />
+      <button class="btn">Update Comment</button>
+    </form>
+  </body>
+</html>
