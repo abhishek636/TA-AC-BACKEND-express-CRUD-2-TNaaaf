@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <h2>Articles</h2>
+      </a>
+      <nav>
+        <a href="/articles">
+          <button>Back</button>
+        </a>
+      </nav>
+    </header>
+    <div>
+      <h1>Title: <%= article.title %></h1>
+      <h2>Author: <%= article.author %></h2>
+      <h2>Tags: <%= article.tags %></h2>
+      <p>Description: <%= article.description %></p>
+      <h3>Likes: <%= article.likes ? article.likes : 0 %></h3>
+    </div>
+    <div>
+      <a href="/articles/<%= article.id %>/inc">
+        <button class="btn">Likes</button>
+      </a>
+      <a href="/articles/<%= article.id %>/dec">
+        <button class="btn">Dislikes</button>
+      </a>
+    </div>
+    <div>
+      <a href="/articles/<%= article.id %>/edit">
+        <button class="update">Edit</button>
+      </a>
+      <a href="/articles/<%= article.id %>/delete">
+        <button class="delete">Delete</button>
+      </a>
+    </div>
+    <div>
+      <form action="/articles/<%= article.id %>/comments" method="post">
+        <textarea name="content" rows="3" placeholder="Add Comment"></textarea>
+        <input type="text" name="author" placeholder="Author" />
+        <input type="number" name="likes" placeholder="Likes" />
+        <input type="submit" value="Add Comment" />
+      </form>
+    </div>
+    <h2>Comments</h2>
+    <hr />
+    <% article.comments.forEach(c => { %>
+    <div class="divdata white">
+      <p><%= c.content %></p>
+      <h3>Likes: <%= c.likes %></h3>
+      <div class="divdata">
+        <a href="/comments/<%= c.id %>/inc">
+          <button class="btn">Likes</button>
+        </a>
+        <a href="/comments/<%= c.id %>/dec">
+          <button class="btn">Dislikes</button>
+        </a>
+      </div>
+      <a href="/comments/<%= c.id %>/edit">
+        <button class="update">Edit</button>
+      </a>
+      <a href="/comments/<%= c.id %>/delete">
+        <button class="delete">Delete</button>
+      </a>
+    </div>
+    <% }) %>
+  </body>
+</html>

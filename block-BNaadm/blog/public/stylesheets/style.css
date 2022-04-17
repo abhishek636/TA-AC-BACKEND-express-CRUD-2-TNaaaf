@@ -1,0 +1,59 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(
+    to right,
+    rgb(134, 176, 223),
+    rgb(80, 144, 170),
+    rgb(51, 97, 150)
+  );
+}
+
+a {
+  color: #2a2b2c;
+  text-decoration: none;
+}
+
+button {
+  background-color: rgb(118, 163, 13);
+  padding: 0.3rem 0.5rem;
+  border: 1px solid black;
+  display: inline;
+}
+
+.btn {
+  background-color: turquoise;
+  margin-bottom: 0.5rem;
+}
+
+.update {
+  background-color: yellowgreen;
+}
+
+.delete {
+  background-color: tomato;
+}
+
+form {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea {
+  width: 80%;
+  outline: none;
+  padding: 0.3rem;
+  margin: 0.4rem;
+}
+
+.white {
+  background-color: white;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
