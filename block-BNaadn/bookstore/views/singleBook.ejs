@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>single Book</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex padding">
+        <a href="/books"> <button>List of Books</button> </a>
+        <a href="/books/new"> <button>Add Book</button> </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <div class="book">
+          <img src="<%=books.cover_image%>" alt="cover image" />
+          <h2><strong>Title :</strong> <%=books.title%></h2>
+          <h3><strong>Pages : </strong><%=books.pages%></h3>
+          <h3><strong>Summery : </strong><%=books.summery%></h3>
+          <h3><strong>Publication : </strong><%=books.publication%></h3>
+        </div>
+      </section>
+
+      <!-- update and delete  -->
+
+      <section>
+        <div>
+          <a href="/books/<%=books.id%>/edit">
+            <button>Update</button>
+          </a>
+          <a href="/books/<%=books.id%>/delete">
+            <button>Delete</button>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
