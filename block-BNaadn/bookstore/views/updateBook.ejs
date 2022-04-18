@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>update book</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container padding flex">
+        <a href="/books"> <button>List of Books</button> </a>
+        <a href="/books/<%=books.id%>"> <button>Back</button> </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="container form">
+        <form action="/books/<%=books.id%>" method="POST">
+          <h2 class="text-center text-2xl">Add Book</h2>
+          <br />
+          <input type="text" name="title" value="<%=books.title%>" placeholder="title of book"/> <br />
+          <input type="text" name="summery" value="<%=books.summery%>" placeholder="summery of book"/><br />
+          <input type="number" name="pages" value="<%=books.pages%>" placeholder="number of pages" /> <br />
+          <input
+            type="text"
+            name="publication"
+            value="<%=books.publication%>"
+            placeholder="publication"
+          />
+          <br />
+          <input type="text" name="coverImage" value="<%=books.coverImage%>" placeholder="image URL"/>
+          <br />
+          <input type="submit" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex padding">
+        <a href="/books"> <button>List of Books</button></a>
+        <a href="/books"> <button>Back</button></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="container form">
+        <form action="/books" method="POST">
+          <h2>Add Book</h2>
+          <input type="text" name="title" placeholder="Enter The Book Title" />
+          <br />
+          <input
+            type="text"
+            name="summery"
+            placeholder="Enter The Book Summery"
+          />
+          <br />
+          <input
+            type="number"
+            name="pages"
+            placeholder="Enter the Number of Pages"
+          />
+          <br />
+          <input
+            type="text"
+            name="publication"
+            placeholder="Enter the Publication"
+          />
+          <br />
+          <input
+            type="text"
+            name="coverImage"
+            placeholder="Enter the image URl"
+          />
+          <br />
+
+          <input type="text" name="name" placeholder="Enter the Author" />
+          <br />
+          <input type="text" name="email" placeholder="Enter the Email" />
+          <br />
+          <input
+            type="text"
+            name="country"
+            placeholder="Enter the country"
+          /><br />
+
+          <input type="submit" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
